@@ -1,0 +1,33 @@
+#include "resource.h"
+#include <windows.h>
+#include <iostream>
+
+IDI_ICON1 ICON "icon.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION 1, 0, 0, 0
+PRODUCTVERSION 1, 0, 0, 0
+FILEFLAGSMASK 0x3fL
+FILEFLAGS 0x0L
+FILEOS VOS__WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE VFT2_UNKNOWN
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904B0"
+        {
+            VALUE "FileDescription", "Friendly Pepe frog :D"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "InternalName", "Pepe"
+            VALUE "LegalCopyright", "© HD_Pelmen_Russian_Edition_AI"
+            VALUE "OriginalFilename", "PepeGdiVirus.exe"
+            VALUE "ProductName", "GDI Virus"
+            VALUE "ProductVersion", "1.0.0.0"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0419, 1251
+    }
+}
