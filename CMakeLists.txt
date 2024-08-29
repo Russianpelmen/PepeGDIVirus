@@ -6,9 +6,10 @@ set(CMAKE_CXX_COMPILER "clang++")
 
 project("GdiVirus")
 
-if(MINGW OR MSYS OR CYGWIN)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++")
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -static")
+#Very important bullshit
+if(MSVC)
+	set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 endif()
 
 add_executable("PepeGdiVirus" WIN32 "main.cpp" "resource.h" "resouse.rc")
