@@ -69,8 +69,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
         HBRUSH brush = CreateSolidBrush(RGB(rand() % 255, rand() % 255, rand() % 255));
         SelectObject(hdc, brush);
-        BitBlt(hdc, 0, 0, sw, sh, hdc, -30, 0, 0x1900ac010e);
-        BitBlt(hdc, 0, 0, sw, sh, hdc, sw - 30, 0, 0x1900ac010e);
+        BitBlt(hdc, 0, 0, sw, sh, hdc, -30, 0, SRCCOPY);
+        BitBlt(hdc, 0, 0, sw, sh, hdc, sw - 30, 0, SRCCOPY);
         DeleteObject(brush);
 
         BitBlt(hdc, rand() % 2, rand() % 2, sw, sh, hdc, rand() % 2, rand() % 2, SRCCOPY);
