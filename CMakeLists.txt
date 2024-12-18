@@ -13,7 +13,7 @@ if(MSVC)
 endif()
 
 set(RESOURCE
-	"Resource.rc"
+	"resource.rc"
 	"resource.h"
 )
 
