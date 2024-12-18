@@ -13,8 +13,8 @@ if(MSVC)
 endif()
 
 set(RESOURCE
-	"Resource/Resource.rc"
-	"Resource/resource.h"
+	"Resource.rc"
+	"resource.h"
 )
 
 add_executable(${PROJECT_NAME} WIN32 "main.cpp" ${RESOURCE})
