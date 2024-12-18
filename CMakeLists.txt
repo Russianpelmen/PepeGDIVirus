@@ -12,4 +12,13 @@ if(MSVC)
 	set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 endif()
 
-add_executable("PepeGdiVirus" WIN32 "main.cpp" "resource.h" "resouse.rc")
+set(RESOURCE
+	"Resource/Resource.rc"
+	"Resource/resource.h"
+)
+
+add_executable(${PROJECT_NAME} WIN32 "main.cpp" ${RESOURCE})
+
+if (WIN32)
+  set_target_properties(${PROJECT_NAME} PROPERTIES WIN32_EXECUTABLE YES)
+endif()
